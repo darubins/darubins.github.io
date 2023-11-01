@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\usepackage{euler}
+\usepackage[mathscr]{eucal}
+\usepackage{wasysym}
+\usepackage{todonotes}
+\usepackage[all]{xy}
+\theoremstyle{plain}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\newtheorem*{definition}{Definition}
+\newtheorem*{remark}{Explanation}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%If you want to title your bold things something different just make another thing exactly like this but replace "problem" with the name of the thing you want, like theorem or lemma or whatever
+ 
+\begin{document}
+ 
+\title{Is This Proof Valid?}
+\date{}
+\maketitle 
+
+
+\noindent \textbf{Evaluate if the proofs below are valid. If they are invalid, state where there is a mistake. If it is possible to fix the proof, attempt to do so, if the result is simply wrong explain why} \\
+ \begin{enumerate}
+    \item [(1)] We will prove that all birds have the same color. \begin{proof}
+        We will prove the statement by induction on the number of birds. Suppose we have 1 bird, then the theorem is trivially true. Suppose the theorem holds for \(n-1\) birds, i.e. any \(n-1\) birds all have the same color. Now take a set of \(n\) birds. The first \(n-1\) birds will all have the same color by the induction hypothesis. Similarly the last \(n-1\) birds will all have the same color. Therefore all \(n\) birds will have the same color.
+    \end{proof}
+    \begin{remark}
+    %%%%%Fill in your explanation here
+    \end{remark}
+    \item [(2)] If \(n > 7 \) is an integer then \(\dfrac{n(n-1)}{2} - (n-1) > 3n - 6 \) \begin{proof}
+        Observe that  \begin{align*}
+           \dfrac{n(n-1)}{2} - (n-1) = \dfrac{n(n-1) -2(n-1)}{2} 
+        \end{align*}
+        Hence we have that \begin{align*}
+            \dfrac{n(n-1) -2(n-1)}{2}  > 3n - 6 
+            \end{align*}
+            So multiplying by the denominator we get \begin{align*}
+           n(n-1) - 2(n-1)  > 6n - 12
+        \end{align*}
+        Simplifying terms we see that \begin{align*}
+            (n-2)(n-1) & > 6(n-2)
+        \end{align*}
+        We can then cancel out the \(n-2\) factor to get that \(n- 1 > 6\) or \(n >7\) which is true. Hence we have proven it.
+    \end{proof}
+    \begin{remark}
+    %%%%%Fill in your explanation here
+    \end{remark}
+    \item [(3)] Prove that if \(n \ge 1\) \[1 + 2 + +3 + \dots +n = \dfrac{n^2+n+1}{2}\] \begin{proof}
+        We let \(n \ge 1\), and we assume that \begin{align}
+            1 + 2 + +3 + \dots +n = \dfrac{n^2+n+1}{2}
+        \end{align}
+        We want to show that \[1 + 2 + +3 + \dots +n + n+1  = \dfrac{(n+1)^2+(n+1)+1}{2}\]
+        To do so let us add \(n+1\) to both sides of our equation (1). We get \begin{align*}
+            1 + 2 + \dots + n + n+1 &= \dfrac{n^2+n+1}{2} + n + 1  \text{ from our inductive hypothesis}\\
+            & = \dfrac{n^2 + n +1}{2} + \dfrac{2(n+1)}{2}\\
+            & = \dfrac{n^2 + 3n + 3}{2} \\
+            & = \dfrac{(n+1)^2+(n+1)+1}{2}
+        \end{align*}
+        Hence we have shown that the statement being true for an integer n implies it is true for the next integer \(n+1\), and so the statement is true by the principles of mathematical induction.
+    \end{proof}
+    \begin{remark}
+    %%%%%Fill in your explanation here
+    \end{remark}
+\end{enumerate}
+
+\end{document}

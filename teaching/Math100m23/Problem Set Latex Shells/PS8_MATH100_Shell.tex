@@ -1,0 +1,198 @@
+\documentclass[11pt]{article}
+%------------------------
+%Packages
+\usepackage[top=0.75in, bottom=1.25in, left=1in, right=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb} %this is THE math package
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancybox}
+\usepackage{hyperref}
+\usepackage{varwidth}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+%------------------------
+%Fonts I use, uncomment if you like to use them.
+%The first is the general font, and the second a math font
+\usepackage{mathpazo}
+%\usepackage{eulervm}
+%------------------------
+%This is so that we have standard fonts for the doublestroked symbols
+%for reals, naturals etc. regardless of what font you use.
+%Don't comment
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+%----------------------------------------------
+%User-defined environments
+%Commented because we're not using them in this document
+%The only uncommented ones are the Problem and Solution environment
+
+% \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+% \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+% \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+% \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+% \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+% \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+% \newenvironment{question}[2][Question]{\begin{trivlist}
+% \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+% \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+% \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem\!]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%\newenvironment{sub-problem}[2][]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2}]}{\end{trivlist}}
+\newenvironment{solution}{\begin{proof}[\textbf{\textit{Solution}}]}{\end{proof}}
+%----------------------------------------------
+
+%----------------------------
+%User-defined notations
+\newcommand{\zz}{\mathbb Z}   %blackboard bold Z
+\newcommand{\qq}{\mathbb Q}   %blackboard bold Q
+\newcommand{\ff}{\mathbb F}   %blackboard bold F
+\newcommand{\rr}{\mathbb R}   %blackboard bold R
+\newcommand{\nn}{\mathbb N}   %blackboard bold N
+\newcommand{\cc}{\mathbb C}   %blackboard bold C
+\newcommand{\af}{\mathbb A}   %blackboard bold A
+\newcommand{\pp}{\mathbb P}   %blackboard bold P
+\newcommand{\id}{\operatorname{id}} %for identity map
+\newcommand{\im}{\operatorname{im}} %for image of a function
+\newcommand{\dom}{\operatorname{dom}} %for domain of a function
+\newcommand{\cat}[1]{\mathscr{#1}}   %calligraphic category
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert} %for absolute value
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} %for norm
+\newcommand{\modar}[1]{\text{ mod }{#1}} %for modular arithmetic
+\newcommand{\set}[1]{\left\{#1\right\}} %for set
+\newcommand{\setp}[2]{\left\{#1\ \middle|\ #2\right\}} %for set with a property
+\newcommand{\card}[1]{\#\,{#1}} %for cardinality of a set
+\newcommand{\defeq}{\overset{\text{\tiny def}}{=}}
+
+%Re-defined notations
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\emptyset}{\varnothing}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\gcd}{\operatorname{GCD}}
+\renewcommand{\Im}{\operatorname{Im}}
+%----------------------------
+
+\allowdisplaybreaks
+ 
+\begin{document}
+ 
+\title{Problem Set 8}
+\author{[Your Full Name Here]\\[0.5em]
+MATH 100 | Introduction to Proof and Problem Solving | Summer 2023}
+\date{} 
+\maketitle
+
+%Use \[...\] instead of $$...$$
+
+\begin{problem}{8.1}
+Give an example, with an explanation, of functions for the following if you think examples exist. If you think no such example exists, prove why \begin{enumerate}
+    \item [(a)] An injective but not surjective function
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+    %----------------------------------------
+    \item [(b)] Let \(A = \{a,b,c\}\). A surjective function \(f: A \to \mathcal{P}(A)\) 
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+    %----------------------------------------
+    \item [(c)] A function that is neither surjective nor injective 
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+    %----------------------------------------
+    \item [(d)] A surjective but not injective injective
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+    %----------------------------------------
+    \item [(e)] Let \(A = \{a,b,c\}\). An injective function \(f: A \to \mathcal{P}(A)\) 
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+\end{enumerate}
+\end{problem}
+
+\newpage % Do not delete
+
+%----------------------------------------
+
+\begin{problem}{8.2}
+Let \(A, B \) be finite sets such that \(|A| = |B| = n\). Prove by induction that there are \(n!\) bijective functions from A to B.
+%----------------------------------------
+\begin{solution}
+%Uncomment and WRITE YOUR SOLUTION HERE
+\end{solution}
+%----------------------------------------
+
+\end{problem}
+
+\newpage %Do not delete
+
+\begin{problem}{8.3}
+ Let \(f: A \to B\) be a function and let \(X \subseteq A\) and \(Y \subseteq B\). Recall we defined the sets \begin{align*}
+        f(X) & = \{ y \in Y : y=f(x) \text{ for some } x \in X\} \subseteq B\\
+        f^{-1}(Y) & = \{x \in X : f(x) \in Y \} \subseteq A
+\end{align*}
+\begin{itemize}[itemsep=3em]
+    \item[(a)] Prove that \(X \subseteq f^{-1}(f(X)) \). Give an example to show that this containment can sometimes be strict (ie \( X \subsetneq f^{-1}(f(X))\))
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+%----------------------------------------
+    \item [(b)] Make a similar conjecture and then prove it about the relationship between Y and \(f(f^{-1}(Y))\) (is one contained in the other? If so, which one?)
+    %----------------------------------------
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+%----------------------------------------
+    \item [(c)] Prove that \(f: A \to B\) is injective iff for all subsets \(X \subseteq A\) we have \(X = f^{-1}(f(X)) \)
+    %----------------------------------------
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE
+    \end{solution}
+%----------------------------------------
+    \item [(d)] Make a similar conjecture as in part c and prove it about f being surjective.
+    \begin{solution}
+    %Uncomment and WRITE YOUR SOLUTION HERE    
+    \end{solution}
+%----------------------------------------
+
+\end{itemize}
+\end{problem}
+
+\newpage  %Do not delete
+
+
+
+\begin{center}
+\textbf{Collaborators:}
+%List your peers with whom you discussed the Problem Set
+\end{center}
+\vfill 
+
+\begin{center}
+\textbf{References:}
+%List any book/website/notes that you used to write your solutions
+\end{center}
+\begin{itemize}
+\item[$\bullet$] [Book(s): Title, Author]
+\item[$\bullet$] [Online: \href{http://example.com/}{Link}]
+\item[$\bullet$] [Notes: \href{http://example.com/}{Link}]
+\end{itemize}
+
+\vfill
+\begin{center}
+Fin.
+\end{center}
+\vfill
+
+\end{document}

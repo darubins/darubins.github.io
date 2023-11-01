@@ -1,0 +1,226 @@
+\documentclass[answers,12pt]{exam}
+\usepackage{amsmath}
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+\usepackage{amssymb}
+\usepackage{braket}
+\usepackage[mathscr]{euscript}
+\usepackage{mathabx}
+\usepackage{MnSymbol,wasysym}
+\usepackage[margin=1.001in]{geometry}
+\usepackage{graphicx}
+\usepackage{tensor}
+\usepackage{bbm}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{relsize}
+
+\newcommand{\br}{\hfill \break}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}{\textbf{v}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\spn}{\text{span}}
+\newcommand{\iso}{\text{Iso}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\defn}{\textbf{Definition: }}
+\newcommand{\thm}{\textbf{Theorem: }}
+\newcommand{\leftf}{\left \lfloor}
+\newcommand{\rightf}{\right \rfloor}
+\newcommand{\qedb}{\square}
+\newcommand{\eps}{\epsilon}
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\del}{\nabla}
+\newcommand{\delf}{\nabla f}
+\newcommand{\bh}{\textbf{h}}
+\newcommand{\ba}{\textbf{a}}
+\newcommand{\bx}{\textbf{x}}
+\newcommand{\hn}{||\bh||}
+\newcommand{\p}{\partial}
+\newcommand{\vp}{\varphi}
+\newcommand{\var}{\text{var}}
+\newcommand{\xsum}{X_1+\ldots+X_n}
+\newcommand{\td}{\dot{t}}
+\newcommand{\xd}{\dot{x}}
+\newcommand{\yd}{\dot{y}}
+\newcommand{\zd}{\dot{z}}
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+\newcommand{\fl}{\mathcal{L}}
+\newcommand{\sff}{\textit{II}}
+\newcommand{\ol}{\overline}
+
+
+\begin{document}
+\br
+\textbf{Proof Portfolio}
+\br
+Name: - Math 100 - Summer 2023
+\br\br
+\textbf{Here are the problems for Direct Proof: Choose two out of three of these} %delete fromm your code the one that you do not choose to solve
+\begin{enumerate}
+    \item [(1)] Let \(p \in \Z\). This question gives us two equivalent ways of thinking about prime numbers. Show that the following are equivalent: (ie, prove (a) iff (b) ) \begin{enumerate}
+        \item [(a)] \(p\) has no factors other than 1 or itself 
+        \item [(b)] If \(p \mid ab\), for integers \(a\) and \(b\), then \(p \mid a\) or \(p \mid b\). 
+    \end{enumerate} (Hint: for \((a) \implies (b)\), you may use that if \(a\) and \(p\) have no common divisors, then there exist \(n, m \in \Z\) such that \(np + ma = 1\) )
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    
+    \item [(2)] Show that \(a \equiv b \) mod 10 if and only if \(a \equiv b \) mod 2 and \(a \equiv b \) mod 5 (Hint: for one direction you will have to use something from question 1)
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    
+    
+    \item [(3)] Let \(a, b \in \Z\). Using only the definition of congruence, prove that if \(a \equiv b \) mod \(n\), then \(a^3 \equiv b^3 \) mod \(n\). 
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+\end{enumerate}
+
+\br
+\textbf{Here are the problems for Contrapositive: Choose two out of three of these}
+\begin{enumerate}
+    \item [(1)] Let \(a.b \in \Z\). Show that if \(a^2 + b^2 = c^2 \) for some \(c \in \Z\) then \(3 \mid ab\)
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    
+    \item [(2)] We call \(n\) a perfect square if \(n= k^2\) for some integer \(k\). Show that if either \[n \equiv 2 \text{ mod } 4 \text{  or  } n \equiv 3 \text{ mod } 4\] then \(n\) is not a perfect square.
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    \item [(3)] Suppose \(m,n,t \in \Z\). Prove the following: \begin{enumerate}
+        \item [(a)] If \(m^2(n^2+5)\) is even, then \(m\) is even or \(n\) is odd
+        \item [(b)] If \((m^2+4)(n^2-2mn)\) is odd, then \(m\) and \(n\) are odd
+        \item [(c)] If \(m \nmid nt\) then \(m \nmid n \) and \(m \nmid t\)
+    \end{enumerate}
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above. If you choose this problem make sure you indidicate when you are solving part a, and when you are solving part b, and when you are solving part c
+    \es
+\end{enumerate}
+
+\br
+\textbf{Here are the problems for Contradiction: Choose two out of three of these}
+\begin{enumerate}
+    \item [(1)] We call \(n \in \N\) composite if it is not prime. Show that for all composite numbers n there exists a nontrivial factor \( 1 < a < n \) such that \(a \le \sqrt{n}\)
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    
+    \item [(2)] Let \(A, B\) be finite sets. Prove that if \(A \subseteq B\) then \(|A| \le |B|\)
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    \item [(3)] Show that if \(a, b \in \Z\) then \(a^2 - 4b - 2 \ne 0\)
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+\end{enumerate}
+
+\br
+\textbf{Here are the problems for Induction: Choose two out of three of these}
+\begin{enumerate}
+    \item [(1)] Prove that every \(n \in \N\) has a unique prime decomposition \(n = p_1 p_2 \dots p_k\) for prime's \(p_i\). That is, show there exists such a prime factorization as above, and moreover show that if we also have \(n=q_1q_2 \dots q_l\) then \(k=l\) and \(p_i=q_j\) for some \(i, j\) (ie, show that the primes are all the same up to some reordering of the multiplication: For example \(12 =2 \times2 \times 3 = 3 \times 2 \times 2 = 2 \times 3 \times 2\)).
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    
+    \item [(2)] For \(n \in \N \) prove that \[\int_0^\infty x^n e^{-x}dx = n!\]
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    \item [(3)] Let \(X\) be a finite set with cardinality \( |X| = n\). Show that \(|\mathcal{P}(X)| = 2^n\). \\
+    (Hint: count the number of subsets in two cases: \begin{enumerate}
+        \item [(1)] when an element \(x_n\) is an element of a given subset
+        \item [(2)] when an element \(x_n\) is not an element of the given subset )
+    \end{enumerate} 
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+\end{enumerate}
+
+\br
+\textbf{Here are the problems for Set Proofs: Choose two out of three of these}
+\begin{enumerate}
+    \item [(1)] If \(A,B, C\) are sets: Prove that \begin{enumerate}
+        \item [(a)] \((A \cap B)^c = A^c \cup B^c\)
+        \item [(b)] \(A - (B \cap C)= (A-B) \cup (A-C)\)
+    \end{enumerate}
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above. If you choose this problem make sure you indidicate when you are solving part a,and when you are solving part b
+    \es
+    
+    \item [(2)] Let \(f: A \to B\) be a function. Recall that for \(Y \subseteq B, X \subseteq A\) the pre-image of \(Y\) and the image of \(X\) are defined to be \begin{align*}
+        f^{-1}(Y) &= \{x \in A: f(x) \in Y\}\\
+        f(X) & = \{z \in B: z = f(x) \text{ for some } x \in X\}
+    \end{align*}
+    Prove or disprove the following \begin{enumerate}
+        \item [(a)] \(f^{-1} (Y_1 \cap Y_2 ) = f^{-1}(Y_1) \cap f^{-1}(Y_2)\)
+        \item [(b)] \(f^{-1} (Y_1 \cup Y_2 ) = f^{-1}(Y_1) \cup f^{-1}(Y_2)\)
+        \item [(c)] \(f (X_1 \cap X_2 ) = f(X_1) \cap f(X_2)\)
+        \item [(d)] \(f (X_1 \cup X_2 ) = f(X_1) \cup f(X_2)\)
+    \end{enumerate}
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above. If you choose this problem make sure you indidicate when you are solving part a, and when you are solving part b, and when you are solving part c, and when you are solving part d
+    \es
+    \item [(3)] Let A and B be sets. Prove or disprove the following: \begin{enumerate}
+        \item [(a)] \(\mathcal{P}(A) \cap \mathcal{P}(B) = \mathcal{P}(A \cap B)\)
+        \item [(b)]\(\mathcal{P}(A) \cup \mathcal{P}(B) = \mathcal{P}(A \cup B)\)
+    \end{enumerate}
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above. If you choose this problem make sure you indidicate when you are solving part a, and when you are solving part b.
+    \es
+\end{enumerate}
+
+\br\textbf{Here are the problems for Functions/Relations: Choose two out of three of these}
+\begin{enumerate}
+    \item [(1)] Define a function \(f: \mathcal{P}(\Z) \to \mathcal{P}(\Z)\) that sends a subset \(X \subseteq \Z\) to its compliment \(X^ c\). Prove or disprove that this function is a bijection. If it is a bijection, find its inverse; if it is not, explain why.
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above.
+    \es
+    
+    \item [(2)] Let R and S be equivalence relations on a set X. Prove or disprove the following: \begin{enumerate}
+        \item [(a)] \(R \cap S\) is an equivalence relation on X
+        \item [(b)] \(R \cup S\) is an equivalence relation on X
+    \end{enumerate}
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above. If you choose this problem make sure you indidicate when you are solving part a, and when you are solving part b.
+    \es
+    \item [(3)] Let \(n \in \N\). We can define a multiplication on \(\Z/n\Z\) by \([a][b]=[ab]\) (We will show this is well defined in class). \begin{enumerate}
+        \item [(a)] Note that, in general, it is possible for two nonzero elements of \(\Z/n\Z\) to multiply together to get [0] (for example, [2][2]=[0] in \(\Z/4\Z\)). We call a nonzero element \([0] \ne [x] \in \Z/n\Z\) a zero divisor if there exists another element \(0 \ne [y]\) such that \([x][y] = [0]\). Prove that \(\Z/n\Z\) has a zero divisor if and only if n is a composite number 
+        \item [(b)] We call an element [x] a unit if there exists [y] such that \([x][y]=[1]\) (we think of these elements as the ones we can 'divide' by). First, convince yourself that for a general n, not every element is a unit. Next, prove that every nonzero element is a unit in \(\Z/n\Z\) iff n is prime. \\
+        (Hint: for one direction you will use part (a). For the other direction you will again use the fact that if p is prime, and p does not divide a number a (ie, a and p have no common divisors), then there are integers n and m such that \(np + ma = 1\))
+    \end{enumerate}
+    \bs
+    %if you are going to solve this one, write your answer here. If not delete this box and the code above. If you choose this problem make sure you indidicate when you are solving part a, and when you are solving part b.
+    \es
+\end{enumerate}
+
+\br
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

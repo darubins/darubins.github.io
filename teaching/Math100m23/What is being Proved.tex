@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\usepackage{euler}
+\usepackage[mathscr]{eucal}
+\usepackage{wasysym}
+\usepackage{todonotes}
+\usepackage[all]{xy}
+\theoremstyle{plain}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\newtheorem*{definition}{Definition}
+\newtheorem*{remark}{Proof Explanation}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%If you want to title your bold things something different just make another thing exactly like this but replace "problem" with the name of the thing you want, like theorem or lemma or whatever
+ 
+\begin{document}
+ 
+\title{What is Being Proved?}
+\date{}
+\maketitle 
+
+\noindent \textbf{Given below are proofs for results: State what is being proved:} \\
+\\
+\begin{enumerate}
+    \item [(a)] \begin{proof}
+Assume that x is even, so that \(x = 2a\) for \(a \in \ZZ\). Then \begin{align*}
+    3x^2 - 4x - 5 & = 3(2a)^2 - 4(2a) - 5\\
+    & = 2 (6a^2 - 4a -3) + 1
+\end{align*} so we have that \(3x ^2 - 4x - 5 \) is odd\\
+\noindent Now assume that x is odd, so that \(x = 2b +1 \) for some \(b \in \ZZ\). Then we compute \begin{align*}
+    3x^2 - 4x - 5 & = 3(2b+1)^2 - 4(2b+1) - 5\\
+    & = 2 (6b^2 +2b -3)
+\end{align*} So we see that \(3x ^2 - 4x - 5 \) is even
+\end{proof}
+\begin{remark}
+    %%%%%% Write your explanation of what is being proved here. Make sure you explain how you know that is what is being proved.
+\end{remark}
+    \item [(b)] \begin{proof}
+    By contrapositive, we will assume that \(n = k^2 \) for some \(k \in \ZZ\). Then we have 4 cases: \begin{enumerate}
+        \item [(1)] First, we assume that \(k = 4l \) for some \(l \in \ZZ\). Then \[n = (4l)^2 = 16l^2 \equiv 0 \text{  mod 4  }\]
+        \item [(2)] Next, we assume that \(k= 4a + 1\) for an \(a \in \ZZ\). Then \[n = (4a+1)^2 = 16a^2+8a+1 \equiv 1  \text{  mod 4  }\] 
+        \item [(3)] Now, we assume that \(k= 4b + 2\) for an \(b \in \ZZ\). Then \[n = (4b+2)^2 = 16b^2 +`16b + 4 \equiv 0 \text{  mod 4  } \]
+        \item [(4)] Finally, we assume that \(k= 4c + 3\) for an \(c \in \ZZ\). Then \[n = (4c+3)^2 = 16c^2 +24c 9 \equiv 1 \text{  mod 4  }\] 
+    \end{enumerate} This concludes the proof, as we have exhausted all possibilities. 
+\end{proof}
+\begin{remark}
+    %%%%%% Write your explanation of what is being proved here. Make sure you explain how you know that is what is being proved.
+\end{remark}
+\end{enumerate} 
+
+
+\end{document}
