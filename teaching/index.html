@@ -4,14 +4,34 @@ title: Teaching
 teaching: active
 description: David Rubinstein's Teaching Page
 ---
+<style>
+details summary {
+    cursor: pointer; /* Makes it clear the text is clickable */
+    color: #addfad;
+    font-weight: bold;
+}
+
+details[open] summary::after {
+    content: "▲"; /* Triangle for "open" state */
+    float: right;
+}
+
+details summary::after {
+    content: "▼"; /* Triangle for "closed" state */
+    float: right;
+}
+</style>
+
 <details>
-    <summary style="color:#addfad; font-weight: bold;">Currently Teaching at Mesa College</summary>
+    <summary>Currently Teaching at Mesa College</summary>
     <ul>
         <li>Math 150</li>
         <li>Math 141x</li>
         <li>Math 141</li>
     </ul>
 </details>
+<br>
+
 
 <details>
     <summary><b style="color:#addfad">Previously Taught at UCSC</b></summary>
