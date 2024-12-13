@@ -7,18 +7,18 @@ description: David Rubinstein's Teaching Page
 <style>
 details summary {
     cursor: pointer; /* Makes it clear the text is clickable */
-    color: #addfad;
+    color: darkblue;
     font-weight: bold;
 }
 
-details[open] summary::after {
+details[open] summary::before {
     content: "▲"; /* Triangle for "open" state */
-    float: right;
+    margin-right: 8px; /* Spacing between triangle and text */
 }
 
-details summary::after {
+details summary::before {
     content: "▼"; /* Triangle for "closed" state */
-    float: right;
+    margin-right: 8px;
 }
 </style>
 
