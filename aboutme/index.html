@@ -11,11 +11,9 @@ description: David Rubinstein's About me Page
 
 <style>
 .image-group {
-    display: flex; /* Align images horizontally */
-    gap: 10px; /* Space between images */
-    flex-wrap: wrap; /* Wrap images to the next line if they don't fit */
-    margin-top: 15px; /* Space above the group */
-    justify-content: flex-start; /* Align images to the left (can be changed) */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
 }
 
 .image-group img {
