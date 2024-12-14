@@ -8,12 +8,32 @@ description: David Rubinstein's About me Page
 <div class="row">
 <p>In 2024, I completed my PhD at the University of California, Santa Cruz under the supervision of <a href="https://people.ucsc.edu/~beren/"> Beren Sanders</a>. Before coming to UC Santa Cruz I received my B.S. in Mathematics from the <a href="https://www.math.ucsb.edu/">University of California, Santa Barbara</a>, as well as a minor in Physics. </p>
 <br><br>
+
+<style>
+.image-group {
+    display: flex; /* Align images horizontally */
+    gap: 10px; /* Space between images */
+    flex-wrap: wrap; /* Wrap images to the next line if they don't fit */
+    margin-top: 15px; /* Space above the group */
+    justify-content: flex-start; /* Align images to the left (can be changed) */
+}
+
+.image-group img {
+    width: 150px; /* Set a consistent width for all images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for a polished look */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
+</style>
+
 <p>In my free time I like to: 
 	<ul>
 		<li>Cook/Bake! Some selected favorites of mine include: Challah (pronounced Khallah), Carrot Cake, Pizza (in my little ooni oven), Kugel, and tacos de papa. 
-		<br>
-			<img src="pics/Round Khallah.JPG" alt="Round Challah bread" style="width:200px; height:auto; margin-top:10px;">
-        	<img src="pics/Pizza.JPG" alt="Homemade pizza" style="width:200px; height:auto; margin-left:10px; margin-top:10px;">
+			<div class="image-group">
+                    <img src="pics/Round Khallah.JPG" alt="Challah bread">
+                    <img src="pics/Long Khallah.JPG" alt="Carrot Cake">
+                    <img src="pics/pizza.JPG" alt="Homemade Pizza">
+            </div>
         </li>
 		<li>Make homebrew! I have a small little homebrew setup that is fun to mess around with.</li>
 		<li>Read! In particular I am a big advocate for Yiddish literature (so much has been translated into English) and have many suggestions for people to read if anyone is interested! </li>
